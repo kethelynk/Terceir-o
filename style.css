@@ -1,0 +1,15 @@
+
+body{background-color: orange;}
+
+h1{text-transform: capitalize;
+text-decoration: underline;}
+
+h3{text-transform: capitalize;
+    text-decoration: underline;}
+
+h4{text-transform: capitalize;}
+h4{text-decoration: underline;}
+
+img{border-style: groove;
+border-color: darkslategrey;
+border-width: 5px;}
