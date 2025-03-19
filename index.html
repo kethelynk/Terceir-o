@@ -7,6 +7,20 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <button onclick="changeFontSize('aumentar')">Aumentar</button>
+<button onclick="changeFontSize('reduzir')">Reduzir</button><script>
+function changeFontSize(action){
+const elements = ['h1', 'p'];
+elements.map(element=>{
+
+const selector = document.querySelector(element);
+let value = getComputedStyle(selector).getPropertyValue('font-size');
+value = value.replace('px', '');
+value = action === 'aumentar' ? parseInt(value) + 1 : parseInt(value) - 1;
+selector.style.fontSize = `${value}px`;
+})
+}
+</script>
     <h1>O que é vôlei</h1> 
     <h2>O vôlei, ou voleibol, é um esporte coletivo jogado entre duas equipes de seis jogadores, onde o objetivo principal é fazer a bola tocar o solo do time adversário, enquanto tenta evitar que o time oponente faça o mesmo. 
         O jogo é disputado em uma quadra dividida por uma rede, e cada time tem um campo no lado oposto da rede.
@@ -16,18 +30,21 @@
         
         O time que consegue realizar um ponto (quando a bola toca o chão do adversário ou quando o time adversário comete um erro) ganha o direito de sacar e continua o jogo. 
         O time que alcançar um número predeterminado de pontos (geralmente 25) vence o set, e para vencer a partida é necessário ganhar um número fixo de sets (geralmente 3 ou 5 sets).</h2>
-
+<figure>
         <h3>exemplos:</h3>
     <main>
-        <img src="download.jpeg" alt="">
+        <img src="download.jpeg" alt="jogador jogando vôlei ">
+        <figcaption>jogador jogando vôlei</figcaption>
         <h4>Ataque do leal</h4>
         <ul> <li> uns dos melhores ponteiros </li>
         <li> maior marcador de pontos </li> </ul>
+       
     </main>
     <footer>
-        <img src="download (1).jpeg" alt="">
+        <img src="download (1).jpeg" alt="comemoração">
+        <figcaption>comemoração</figcaption>
         <h4>Melhor jogo</h4>
     </footer>
-    
+</figure>
 </body>
 </html>
